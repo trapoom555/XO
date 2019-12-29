@@ -59,7 +59,7 @@ class board():
         self.trylist[truple[0]][truple[1]] = 'O'
         return self.TargetFunction()
     def TargetFunction(self):
-        return 1 - self.calcb('X') + self.calcb('O')
+        return 1 - self.calcb('X') + 3 * self.calcb('O')
     
     def clear(self):
         self.board = np.zeros((3,3), str)
